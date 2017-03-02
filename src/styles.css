@@ -1,0 +1,822 @@
+/* Limpiadores */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, span {margin:0;padding:0;resize:none;}table {border-collapse:collapse;border-spacing:0;}fieldset, img {border:0;}address, caption, cite, code, strong, dfn, em, th, var {font-style:normal;font-weight:normal;}ol, ul {list-style:none;}caption, th {text-align:left;}h1, h2, h3, h4, h5, h6 {font-size:100%;font-weight:normal;}q:before, q:after {content:'';}abbr, acronym {border:0;}input:focus, textarea:focus{outline:0px;}html, body {overflow-x:hidden;overflow-y:hidden;}
+/*FUENTE*/
+@font-face {
+	font-family:'TrajanProRegular';
+	src: url('./assets/font/TrajanProRegular.eot');
+	src: local('TrajanProRegular'), url('./assets/font/TrajanProRegular.woff') format('woff'), url('./assets/font/TrajanProRegular.ttf') format('truetype');
+}
+/*DOC*/
+html, body{
+    font-family:'TrajanProRegular';
+    width:100%;
+    height:100%;
+		-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+		background:#ddd;
+}
+a{
+    text-decoration: none;
+}
+
+/*Globales*/
+.pcom{
+    width:100%;
+    height:100vh;
+}
+#secciones{
+		position:relative;
+		width:100%;
+		height:100%;
+		display:none;
+		overflow-x:hidden;
+		overflow-y:hidden;
+}
+#ssecciones{
+		position:relative;
+		width:100%;
+		height:100%;
+		display:none;
+		overflow-x:hidden;
+		overflow-y:hidden;
+}
+
+/*HOME*/
+
+#app{
+		position:relative;
+    background:url('./assets/img/fondo.jpg') no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+#app h1{
+    position:absolute;
+    right:10px;
+    top:10px;
+    font-size:32px;
+    color:#fff;
+    letter-spacing: 1px;
+    text-shadow:1px 1px 1px #222;
+    opacity:.9;
+}
+#app .oMesa{
+    position:absolute;
+    transform:perspective(500px) rotateY(-38deg) rotateZ(4deg) rotateX(-6deg) translate3d(0,0,0);
+    width:24%;
+    height:12%;
+    font-size:32px;
+    color:#fff;
+    display:block;
+}
+#app #boton_juegos{
+    width:25%;
+    height:12%;
+    right:37%;
+    bottom:20%;
+    background:url('./assets/img/icono/dados.png') no-repeat;
+    background-size: 100% 100%;
+		transform:perspective(500px) rotateY(-30deg) rotateZ(4deg) rotateX(-6deg) translate3d(0,0,0);
+}
+#app #boton_libro{
+    width:35%;
+    height:14%;
+    right:16%;
+    bottom:14%;
+    background:url('./assets/img/icono/libro.png') no-repeat;
+    background-size: 100% 100%;
+    transform:perspective(500px) rotateY(-30deg) rotateZ(6deg) rotateX(45deg);
+}
+#app #boton_reglas{
+    right:58%;
+    bottom:20%;
+    width:30%;
+    height:10%;
+    background:url('./assets/img/icono/reglas.png') no-repeat;
+    background-size: 100% 100%;
+    transform:perspective(500px) rotateY(0) rotateZ(-2deg) rotateX(0deg);
+}
+#app #boton_mapa{
+    position:absolute;
+    width:35%;
+    height:23%;
+    display:block;
+    left:-3%;
+    top:24%;
+    transform:perspective(290px) rotateY(20deg);
+    opacity:0;
+		background:url('./assets/img/icono/mapa.png') no-repeat;
+		background-size: 100% 100%;
+}
+#app #boton_objeto{
+    position:absolute;
+    width:14%;
+    height:18%;
+    display:block;
+    left:33%;
+    top:29%;
+    opacity:0;
+		background:url('./assets/img/icono/reloj.png') no-repeat;
+		background-size: 100% 100%;
+}
+
+/*NAVEGACION*/
+
+.flecha{
+  display:block;
+  width:52px;
+  height:50px;
+  background:rgba(0, 0, 0, .75);
+  color:#fff;
+  padding-top:10px;
+  text-align:center;
+  font-size:32px;
+  position:absolute;
+  top:45%;
+  border:1px solid #000;
+	z-index:2;
+	cursor:pointer;
+}
+#fDerecha{
+  right:-1px;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+}
+#fIzquierda{
+  left:-1px;
+  display:none;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+}
+#regresar{
+  display:block;
+  position:absolute;
+  bottom:-1px;
+  right:-1px;
+  width:55px;
+  height:50px;
+  border-top-left-radius:35px;
+  border:1px solid #000;
+  background:rgba(0, 0, 0, .75) url('./assets/img/back.png') no-repeat;
+  background-size: 100% 100%;
+	z-index:2;
+	cursor:pointer;
+}
+
+/*JUEGOS*/
+
+#juegos{
+  background:url('./assets/img/fondos/fondo6.jpg') no-repeat;
+  background-size: 100% 100%;
+	box-shadow:inset 0px 0px 10px 2px rgba(10,10,10,0.8);
+}
+#juegos h2{
+	margin:5% auto;
+	text-align:right;
+	width:75%;
+	padding-bottom: 5px;
+	font-size:30px;
+	border-bottom: 1px solid #000;
+	text-shadow: 1px 1px 2px #222;
+}
+#juegos .jboton{
+	margin:40px auto;
+	padding:10px 0;
+	display:block;
+	text-align:center;
+	width:70%;
+	height:30px;
+	color:#000;
+	font-size:20px;
+	text-shadow: 1px 1px 1px #222;
+	box-shadow: 5px 5px 8px rgba(10,10,10,0.8);
+}
+#juegos .jboton:active{
+	box-shadow:inset 5px 5px 8px rgba(10,10,10,0.6);
+}
+#boton_aventura{
+	background:rgba(28,63,122,0.5);
+}
+#boton_trivia{
+	background:rgba(130,26,27,0.5);
+}
+#jota1{
+	font-family:serif;
+	position:fixed;
+	top:10px;
+	left:10px;
+	width:40px;
+	text-align:center;
+	font-size:48px;
+	opacity:.9;
+}
+#jota2{
+	font-family:serif;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	width:40px;
+	text-align:center;
+	font-size:48px;
+	transform:rotate(180deg);
+	opacity:.9;
+}
+/*PROPIA AVENTURA*/
+#p_aventura{
+	background:url('./assets/img/fondos/fondo6.jpg') no-repeat;
+  background-size: 100% 100%;
+	box-shadow:inset 0px 0px 10px 2px rgba(10,10,10,0.8);
+}
+#p_aventura h2{
+	margin:5% auto;
+	text-align:right;
+	width:75%;
+	padding-bottom: 5px;
+	font-size:18px;
+	border-bottom: 1px solid #000;
+	text-shadow: 1px 1px 2px #222;
+}
+/*Camara Juego*/
+video{
+	position:absolute;
+	left:50%;
+	margin-left:-150px;
+	transform:scaleY(-1);
+}
+#snap{
+	width:300px;
+	height:240px;
+	position:fixed;
+	z-index:1;
+	cursor:pointer;
+	left:50%;
+	margin-left:-150px;
+	background:url('./assets/img/aventura/marco.png') no-repeat;
+  background-size:100% 100%;
+	box-shadow: 6px 6px 3px rgba(10,10,10,0.8);
+	display:none;
+}
+.cuadrante{
+	width:60px;
+	height:80px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-40px 0 0 -30px;
+}
+#blanco{
+	border:1px solid #fff;
+}
+#verde{
+	border:1px solid #00ff00;
+	display:none;
+}
+#rojo{
+	border:1px solid #ff0000;
+	display:none;
+}
+.flash{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#fff;
+	z-index:5;
+	display:none;
+}
+/*Fin Camara Juego*/
+#siguiente{
+	background:rgba(28,63,122,0.65);
+	position:absolute;
+	bottom:10px;
+	left:10px;
+	display:none;
+}
+#nomostrar{
+  opacity:0;
+}
+#perso{
+  position:absolute;
+  width:80%;
+  height:50%;
+  top:50%;
+  left:50%;
+  margin:-35% 0 0 -40%;
+}
+#perso1{
+  background:url('./assets/img/aventura/personajes/per-1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#perso2{
+  background:url('./assets/img/aventura/personajes/per-2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#perso3{
+  background:url('./assets/img/aventura/personajes/per-3.png') no-repeat;
+  background-size: 100% 100%;
+}
+#perso4{
+  background:url('./assets/img/aventura/personajes/per-4.png') no-repeat;
+  background-size: 100% 100%;
+}
+.personajes{
+  display:block;
+  width:42%;
+  height:44%;
+  margin:10px;
+  background:#00ffff;
+  box-shadow:8px 8px 5px 0px rgba(0,0,0,0.9);
+  float:left;
+  opacity:0.8;
+  border-radius:8px;
+}
+.caminos{
+	font-family:'TrajanProRegular';
+  display:block;
+	font-size:18px;
+  width:40%;
+  height:6%;
+  margin:20px auto;
+  box-shadow:8px 8px 5px 0px rgba(0,0,0,0.75);
+	border:0 solid;
+	color:#000;
+	text-shadow: 1px 1px 1px #222;
+}
+.caminos:active{
+	box-shadow:inset 5px 5px 8px rgba(10,10,10,0.6);
+}
+[id^=per-1] h1, [id^=per-2] h1, [id^=per-3] h1, [id^=per-4] h1{
+  opacity:0;
+}
+.av-desc{
+  width:75%;
+  margin:40px auto;
+  color:#010101;
+  text-shadow: -1px -2px 1px #000;
+  text-shadow: 1px 1px 0px #aaa;
+}
+/*PERSONAJE 1*/
+#per-1{
+  background:url('./assets/img/aventura/01/per-1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c1{
+  background:url('./assets/img/aventura/01/per-1-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c1-c1{
+  background:url('./assets/img/aventura/01/per-1-c1-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c1-c1-c1{
+  background:url('./assets/img/aventura/01/per-1-c1-c1-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c1-c1-c2{
+  background:url('./assets/img/aventura/01/per-1-c1-c1-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c1-c2{
+  background:url('./assets/img/aventura/01/per-1-c1-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c1-c3{
+  background:url('./assets/img/aventura/01/per-1-c1-c3.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c1-c3-c1{
+  background:url('./assets/img/aventura/01/per-1-c1-c3-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c1-c3-c2{
+  background:url('./assets/img/aventura/01/per-1-c1-c3-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c2{
+  background:url('./assets/img/aventura/01/per-1-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c2-c1{
+  background:url('./assets/img/aventura/01/per-1-c2-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-1-c2-c2{
+  background:url('./assets/img/aventura/01/per-1-c2-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+/*PERSONAJE 2*/
+#per-2{
+  background:url('./assets/img/aventura/02/per-2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-2-c1{
+  background:url('./assets/img/aventura/02/per-2-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-2-c2{
+  background:url('./assets/img/aventura/02/per-2-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-2-c3{
+  background:url('./assets/img/aventura/02/per-2-c3.png') no-repeat;
+  background-size: 100% 100%;
+}
+/*PERSONAJE 3*/
+#per-3{
+  background:url('./assets/img/aventura/03/per-3.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c1{
+  background:url('./assets/img/aventura/03/per-3-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c1-c1{
+  background:url('./assets/img/aventura/03/per-3-c1-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c1-c1-c1{
+  background:url('./assets/img/aventura/03/per-3-c1-c1-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c1-c1-c2{
+  background:url('./assets/img/aventura/03/per-3-c1-c1-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c1-c2{
+  background:url('./assets/img/aventura/03/per-3-c1-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c1-c3{
+  background:url('./assets/img/aventura/03/per-3-c1-c3.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c1-c3-c1{
+  background:url('./assets/img/aventura/03/per-3-c1-c3-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c1-c3-c2{
+  background:url('./assets/img/aventura/03/per-3-c1-c3-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c2{
+  background:url('./assets/img/aventura/03/per-3-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c2-c1, #per-3-c2-c2{
+  background:url('./assets/img/aventura/03/per-3-c2-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c2-c2-c1{
+  background:url('./assets/img/aventura/03/per-3-c2-c2-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-3-c2-c2-c2{
+  background:url('./assets/img/aventura/03/per-3-c2-c2-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+/*PERSONAJE 4*/
+#per-4{
+  background:url('./assets/img/aventura/04/per-4.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c1{
+  background:url('./assets/img/aventura/04/per-4-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c1-c1{
+  background:url('./assets/img/aventura/04/per-4-c1-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c1-c1-c1{
+  background:url('./assets/img/aventura/04/per-4-c1-c1-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c1-c1-c2{
+  background:url('./assets/img/aventura/04/per-4-c1-c1-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c1-c2{
+  background:url('./assets/img/aventura/04/per-4-c1-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c1-c3{
+  background:url('./assets/img/aventura/04/per-4-c1-c3.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c1-c3-c1{
+  background:url('./assets/img/aventura/04/per-4-c1-c3-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c1-c3-c2{
+  background:url('./assets/img/aventura/04/per-4-c1-c3-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c2{
+  background:url('./assets/img/aventura/04/per-4-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c2-c1{
+  background:url('./assets/img/aventura/04/per-4-c2-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c2-c2{
+  background:url('./assets/img/aventura/04/per-4-c2-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c2-c2-c1{
+  background:url('./assets/img/aventura/04/per-4-c2-c2-c1.png') no-repeat;
+  background-size: 100% 100%;
+}
+#per-4-c2-c2-c2{
+  background:url('./assets/img/aventura/04/per-4-c2-c2-c2.png') no-repeat;
+  background-size: 100% 100%;
+}
+/*REGLAS*/
+
+#reglas{
+	background:url('./assets/img/fondos/fondo3.jpg') no-repeat;
+	background-size: 100% 100%;
+	box-shadow:inset 0 0 25px 10px rgba(0, 0, 0, 0.55);
+	text-shadow: 1px 1px 1px #666;
+}
+#reglas_tapa{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100vh;
+	background:url('./assets/img/reglas/tapa.png') no-repeat;
+	background-size: 100% 100%;
+	z-index:3;
+}
+#reglas h2{
+	text-align:center;
+	text-decoration:underline;
+	width:100%;
+	font-size:30px;
+	margin-bottom:40px;
+}
+#reglas p{
+	margin:15px auto 0 auto;
+	width:90%;
+	font-size:14px;
+}
+#reglas ul{
+	margin:15px auto 0 auto;
+	width:90%;
+	font-size:13px;
+}
+#reglas #firmado{
+	margin-top:20px;
+	text-align: right;
+}
+
+/*LIBRO*/
+
+#libro{
+  background:url('./assets/img/fondos/fondo3.jpg') no-repeat;
+  background-size: 100% 100%;
+  box-shadow:inset 0 0 25px 10px rgba(0, 0, 0, 0.55);
+}
+#para_firmar{
+	width:100%;
+  height:100vh;
+  float:left;
+  position:absolute;
+	top:0;
+}
+#ver_firmas{
+	width:100%;
+  height:100vh;
+  float:left;
+  position:absolute;
+	top:0;
+	left:100%;
+	background:url('./assets/img/fondos/fondo3.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+#libro #form_libro{
+  width:100%;
+  height:70%;
+  margin:15% auto;
+}
+#libro #firma_texto{
+  font-family:'TrajanProRegular';
+  display:block;
+  margin:0 auto;
+  width:88%;
+  height:75%;
+  background:rgba(0, 0, 0, 0);
+  border:0 solid;
+  border-bottom: 1px solid #444;
+  border-right: 1px solid #444;
+  box-shadow: 5px 5px 5px 2px rgba(10, 10, 10, 0.55);
+  font-size:18px;
+  padding:5px;
+}
+#libro #firma{
+  font-family:'TrajanProRegular';
+  position:absolute;
+  display:block;
+  right:5%;
+  width:50%;
+  height:30px;
+  border:0 solid;
+  border-bottom: 1px solid #333;
+  margin:15px 0;
+  background:rgba(0, 0, 0, 0);
+  font-size: 18px;
+}
+#libro button{
+	font-family:'TrajanProRegular';
+  position:absolute;
+  height:45px;
+  border:0 solid;
+  bottom:6%;
+  font-size:18px;
+  box-shadow: 5px 5px 5px 2px rgba(10, 10, 10, 0.55);
+  color:#333;
+  text-shadow: 1px 1px 1px #555;
+}
+#libro #firmar{
+	width:25%;
+  left:5%;
+  background:rgba(28,63,122,0.35);
+}
+#ir_firmas{
+	width:40%;
+	left:35%;
+	background:rgba(130,26,27,0.35);
+}
+#a_firmar{
+	width:30%;
+	left:5%;
+	background:rgba(248,159,14,0.35);
+}
+#libro button:active{
+	box-shadow:inset 5px 5px 5px 2px rgba(10, 10, 10, 0.35);
+}
+#las_firmas{
+	margin:30px auto 0 auto;
+	overflow:hidden;
+	width:95%;
+	height:80%;
+	text-shadow:1px 1px 1px rgba(10, 10, 10, 0.7);
+}
+#las_firmas div{
+	margin-top:10px;
+}
+#las_firmas span{
+	display:block;
+	margin-top:5px;
+	width:100%;
+	text-align:right;
+	font-size:14px;
+	color:#333;
+}
+#las_firmas .centrado{
+	text-align:center;
+}
+
+/*QUIZ*/
+#quiz{
+  background:url('./assets/img/fondos/fondo6.jpg') no-repeat;
+  background-size: 100% 100%;
+  box-shadow:inset 0 0 15px rgba(20, 20, 20, 0.5);
+}
+#quiz h1{
+  position:fixed;
+  z-index:2;
+  display:none;
+}
+#quiz label{
+  border-bottom:1px solid rgba(60, 60, 60, 0.55);
+  margin:10px 0;
+  padding:10px 4px;
+  color:#151515;
+  border-top-right-radius:10px;
+  text-shadow:0 0 2px #555;
+  -webkit-transition:background 1s;
+  transition:background 1s;
+}
+#quiz input[type="radio"]{
+  float:left;
+  display:none;
+}
+input[type="radio"]:checked+label{
+  background:rgba(90, 90, 90, 0.3);
+  -webkit-transition:background 0.5s;
+  transition:background 0.5s;
+}
+#quiz .ctrivia{
+  width:70%;
+  height:0;
+  overflow:hidden;
+  margin:50px auto;
+}
+#quiz #respuesta p{
+  text-shadow:0 0 1px #444;
+  color:#101010;
+}
+#quiz textarea{
+  font-family:'TrajanProRegular';
+  width:97%;
+  height:65%;
+  margin:10px 0;
+  border:1px solid #666;
+  border-radius:2px;
+  padding:5px;
+  font-size:16px;
+  color:#111;
+  background:rgba(250, 250, 250, 0.2);
+  text-shadow:0 0 1px #444;
+  box-shadow:inset 0 0 3px rgba(90, 90, 90, 0.8);
+}
+#quiz #in-resp{
+  font-family:'TrajanProRegular';
+  margin:10px 0;
+  width:97%;
+  height:30px;
+  border:1px solid #666;
+  border-radius:2px;
+  padding:5px;
+  font-size:16px;
+  color:#111;
+  background:rgba(250, 250, 250, 0.2);
+  text-shadow:0 0 1px #444;
+  box-shadow:inset 0 0 3px rgba(90, 90, 90, 0.8);
+}
+#resultados{
+  color:#151515;
+  text-shadow:0 0 2px #555;
+}
+
+/*GALERIA GLOBAL*/
+
+#mapa{
+	width:auto;
+}
+#mapa h1{
+  position:fixed;
+  z-index:2;
+}
+.cQuiz{
+  width:100%;
+  height:100vh;
+  float:left;
+  position:absolute;
+}
+.cReglas{
+	width:100%;
+  float:left;
+  position:absolute;
+}
+.cGaleria{
+  width:100%;
+  height:100vh;
+  float:left;
+  position:absolute;
+  background:url('./assets/img/fondos/fondo4.png') no-repeat;
+  background-size:100% 100%;
+  box-shadow: inset 0 0 40px 30px rgba(10,10,10,0.2);
+}
+.cGaleria h2{
+  margin:5px auto;
+  width:90%;
+  color:#101010;
+  text-shadow: 1px 1px 2px #000;
+  font-size:20px;
+}
+.cGaleria p{
+  margin:5px auto;
+  width:90%;
+  color:#101010;
+  text-shadow: 1px 1px 2px #000;
+  font-size:14px;
+  line-height:22px;
+}
+.cGaleria img{
+  display:block;
+  margin:20px auto;
+  box-shadow: 8px 8px 10px rgba(10,10,10,0.8);
+}
+.cGaleria .apa{
+  width:90%;
+  height:auto;
+}
+.cGaleria .noApa{
+  width:auto;
+  height:50%;
+}
+.noDis{
+  display:none;
+}
+.fuera{
+  left:100%;
+}

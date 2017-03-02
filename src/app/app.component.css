@@ -1,0 +1,35 @@
+@keyframes jumpReglasJuegos {
+  0%, 30%, 100% { bottom:20%; }
+  10%   { bottom: 22%; }
+}
+@keyframes jumpLibro {
+  0%, 30%, 100% { bottom:14%; }
+  10%   { bottom: 17%; }
+}
+@keyframes brilloGaleria {
+  0% { opacity:0; }
+  20% { opacity:0.9; }
+  40% { opacity:0; }
+  70% { opacity:0.8; }
+  100% { opacity:0; }
+}
+/******************************************/
+#boton_reglas{
+  animation:jumpReglasJuegos 3s infinite;
+}
+#boton_juegos{
+  animation:jumpReglasJuegos 3s infinite;
+  animation-delay: 0.3s;
+}
+#boton_libro{
+  animation:jumpLibro 3s infinite;
+  animation-delay: 0.6s;
+}
+#boton_mapa{
+  animation:brilloGaleria 3s infinite;
+  animation-delay: 0.5s;
+}
+#boton_objeto{
+  animation:brilloGaleria 2.8s infinite;
+  animation-delay: 1.3s;
+}

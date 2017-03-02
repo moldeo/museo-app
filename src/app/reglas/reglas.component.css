@@ -1,0 +1,10 @@
+@keyframes destapar{
+  0%  { width:100%;left:0; }
+  100%  { width:1%;left:-20px; }
+}
+/***********************************/
+#reglas_tapa{
+  animation:destapar 1800ms;
+  animation-fill-mode:forwards;
+  animation-delay:1s;
+}

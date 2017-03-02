@@ -1,0 +1,42 @@
+<div class="pcom">
+  <div id="nomostrar">
+    <h1>Titulo</h1>
+  </div>
+
+    <!--CAMARA-->
+    <div class="flash"></div>
+
+    <div id="snap" (click)="snapshot(1)">
+      <div class="cuadrante" id="blanco"></div>
+      <div class="cuadrante" id ="verde"></div>
+      <div class="cuadrante" id ="rojo"></div>
+    </div>
+    <video autoplay="true" #hardwareVideo id="videoElement" width="300" height="240"></video>
+
+    <div id="rostro_final" style="position:absolute;left:50%;margin-left:-150px;top:280px;width:300px;height:320px;">
+      <div id="cont_img" style="position:absolute;overflow:hidden;">
+        <img src="assets/f.png" id="salida2" />
+      </div>
+      <img src="per-1.png" id="personaje" style="width:300px;height:auto;position:fixed;display:none;box-shadow: 6px 6px 3px rgba(10,10,10,0.8);" />
+    </div>
+
+    <button type="button" class="caminos" id="siguiente">Continuar</button>
+
+    <button type="button" id="guardarImg" style="position:absolute;top:10px;right:5px;">H</button>
+    <canvas style="display:none;"></canvas>
+
+    <!--FIN CAMARA-->
+
+    <!--AVENTURA-->
+    <img src="" id="img-p" style="display:none;position:absolute;top:20px;left:60px;" width="80" height="80" />
+    <p></p>
+    <!--FIN AVENTURA-->
+
+    <p id="jota1">A<br>&spades;</p><br>
+    <p id="jota2">A<br>&spades;</p>
+
+    <!--
+    Navegación Global
+    -->
+    <a href="../../../index.html" data-transition="slideup" id="regresar"></a>
+</div>

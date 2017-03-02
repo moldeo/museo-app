@@ -1,0 +1,14 @@
+<div id="secciones">
+  <router-outlet></router-outlet>
+</div>
+<div id="app" class="pcom">
+  <div>
+    <h1>{{title}}</h1>
+
+    <a href="#" (click)="rtAni.goFlow('app','secciones')" routerLink="juegos" id="boton_juegos" class="oMesa"></a>
+    <a href="#" (click)="rtAni.goFlow('app','secciones')" routerLink="libro" id="boton_libro" class="oMesa"></a>
+    <a href="#" (click)="rtAni.goFlow('app','secciones')" routerLink="reglas" id="boton_reglas" class="oMesa"></a>
+    <a href="#" (click)="rtAni.goSlideUp('app','secciones')" routerLink="mapas" id="boton_mapa"></a>
+    <a href="#" (click)="rtAni.goSlideUp('app','secciones')" routerLink="objetos" id="boton_objeto"></a>
+  </div>
+</div>

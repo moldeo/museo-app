@@ -1,0 +1,24 @@
+<div id="sssecciones">
+  <router-outlet></router-outlet>
+</div>
+<div id="p_aventura" class="pcom">
+  <div id="nomostrar">
+    <h1>Titulo</h1>
+  </div>
+  <h2>Selección de Personajes:</h2>
+
+    <div id="perso">
+      <a [routerLink]="['per-1']" (click)="rtAni.goSlide('p_aventura','sssecciones')" class="personajes" id="perso1"></a>
+      <a class="personajes" id="perso2"></a>
+      <a class="personajes" id="perso3"></a>
+      <a class="personajes" id="perso4"></a>
+    </div>
+
+    <p id="jota1">A<br>&spades;</p><br>
+    <p id="jota2">A<br>&spades;</p>
+
+    <!--
+    Navegación Global
+    -->
+    <a id="regresar"></a>
+</div>

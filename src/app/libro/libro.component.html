@@ -1,0 +1,25 @@
+<div id="libro" class="pcom">
+  <div id="nomostrar">
+      <h1>Libro</h1>
+  </div>
+
+  <div id="para_firmar">
+    <form id="form_libro" method="post">
+      <textarea id="firma_texto" name="firma_texto" placeholder="Texto"></textarea>
+      <input id="firma" type="text" name="firma" placeholder="Nombre" />
+    </form>
+
+    <button type="button" name="firmar" id="firmar">Firmar</button>
+    <button type="button" name="ir_firmas" id="ir_firmas">Ver Firmas</button>
+  </div>
+
+  <div id="ver_firmas">
+    <div id="las_firmas"><p class="centrado">- No hay Firmas -</p></div>
+    <button type="button" name="a_firmar" id="a_firmar">Ir a Firmar</button>
+  </div>
+
+  <!--
+  Navegación Global
+  -->
+  <a (click)="rtAni.backFlow('secciones','app')" id="regresar"></a>
+</div>

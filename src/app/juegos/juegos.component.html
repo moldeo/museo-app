@@ -1,0 +1,20 @@
+<div id="ssecciones">
+  <router-outlet></router-outlet>
+</div>
+<div id="juegos" class="pcom">
+    <div id="nomostrar">
+        <h1>Juegos</h1>
+    </div>
+    <h2>Juegos</h2>
+
+    <a [routerLink]="['aventura']" (click)="rtAni.goSlide('juegos','ssecciones')" id="boton_aventura" class="jboton">¡Tu Propia Aventura!</a>
+    <a [routerLink]="['trivia']" (click)="rtAni.goSlide('juegos','ssecciones')" id="boton_trivia" class="jboton">Trivia</a>
+
+    <p id="jota1">J<br>&diams;</p><br>
+    <p id="jota2">J<br>&diams;</p>
+
+    <!--
+    Navegación Global
+    -->
+    <a (click)="rtAni.backFlow('secciones','app')" id="regresar"></a>
+</div>
