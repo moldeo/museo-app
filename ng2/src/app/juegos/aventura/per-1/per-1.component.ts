@@ -1,6 +1,7 @@
 import { ViewChild, ViewChildren, Component, OnInit } from '@angular/core';
+export const fs : any = window["fs"];
 import * as html2canvas from "html2canvas";
-import "tracking";
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-per-1',
@@ -24,6 +25,7 @@ export class Per1Component implements OnInit {
         video.play();
         $('#snap').fadeIn(50);
     });
+
   }
 
 }

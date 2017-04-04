@@ -14,6 +14,7 @@ export class JuegosComponent implements OnInit {
   constructor(public rtAni: RoutesTransition) { }
 
   ngOnInit() {
+    
   }
 
 }

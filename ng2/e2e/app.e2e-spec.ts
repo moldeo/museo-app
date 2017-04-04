@@ -1,10 +1,10 @@
-import { NgBienvenidAppPage } from './app.po';
+import { PruebaMuseoPage } from './app.po';
 
-describe('ng-bienvenid-app App', function() {
-  let page: NgBienvenidAppPage;
+describe('prueba-museo App', () => {
+  let page: PruebaMuseoPage;
 
   beforeEach(() => {
-    page = new NgBienvenidAppPage();
+    page = new PruebaMuseoPage();
   });
 
   it('should display message saying app works', () => {

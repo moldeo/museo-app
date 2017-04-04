@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RoutesTransition } from '../../routestransition.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-aventura',
