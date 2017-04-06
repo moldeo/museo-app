@@ -14,7 +14,7 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 1020, height: 650, icon:'icon.png'})
-
+  //mainWindow.setFullScreen(true) //FullScreen
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'ng2/dist/index.html'),
