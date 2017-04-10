@@ -7,14 +7,14 @@
     <div class="flash"></div>
 
     <video autoplay="true" #hardwareVideo id="videoElement" width="300" height="240"></video>
-    <canvas id="snap" #overlay (click)="snapshot(1)" width="300" height="240"></canvas>
+    <canvas id="snap" #overlay (click)="s.snapshot(1, track._params, ctx);" width="300" height="240"></canvas>
 
     <div id="rostro_final" style="position:absolute;left:50%;margin-left:-150px;top:280px;width:300px;height:320px;">
       <div id="cont_img" style="position:absolute;overflow:hidden;">
         <canvas #drawer width="300" height="240" style="border:0 solid #000;"></canvas>
         <!--<img src="assets/f.png" id="salida2" />-->
       </div>
-      <img src="per-1.png" id="personaje" style="width:300px;height:auto;position:fixed;display:none;box-shadow: 6px 6px 3px rgba(10,10,10,0.8);" />
+      <!--<img src="per-1.png" id="personaje" style="width:300px;height:auto;position:fixed;display:none;box-shadow: 6px 6px 3px rgba(10,10,10,0.8);" />-->
     </div>
 
     <button type="button" class="caminos" id="siguiente" (click)="stopFace();">Continuar</button>
@@ -34,5 +34,5 @@
     <!--
     Navegación Global
     -->
-    <a href="../../../index.html" (click)="stopFace();" id="regresar"></a>
+    <a [routerLink]="['../../../']" (click)="stopFace();rtAni.backFlow('secciones','app');" id="regresar"></a>
 </div>

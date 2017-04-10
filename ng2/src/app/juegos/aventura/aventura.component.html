@@ -8,10 +8,18 @@
   <h2>Selección de Personajes:</h2>
 
     <div id="perso">
-      <a [routerLink]="['per-1']" (click)="rtAni.goSlide('p_aventura','sssecciones')" class="personajes" id="perso1"></a>
-      <a class="personajes" id="perso2"></a>
-      <a class="personajes" id="perso3"></a>
-      <a class="personajes" id="perso4"></a>
+      <a [routerLink]="['per-1']" (click)="rtAni.goSlide('p_aventura','sssecciones')" class="personajes" id="perso1">
+        <img src="./assets/img/aventura/personajes/per-1.png" width="100%" height="100%">
+      </a>
+      <a class="personajes" id="perso2">
+        <img src="./assets/img/aventura/personajes/per-2.png" width="100%" height="100%">
+      </a>
+      <a class="personajes" id="perso3">
+        <img src="./assets/img/aventura/personajes/per-3.png" width="100%" height="100%">
+      </a>
+      <a class="personajes" id="perso4">
+        <img src="./assets/img/aventura/personajes/per-4.png" width="100%" height="100%">
+      </a>
     </div>
 
     <p id="jota1">A<br>&spades;</p><br>
@@ -20,5 +28,5 @@
     <!--
     Navegación Global
     -->
-    <a id="regresar"></a>
+    <a id="regresar" [routerLink]="['../../']" (click)="rtAni.backFlow('secciones','app')"></a>
 </div>

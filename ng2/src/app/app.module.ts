@@ -21,6 +21,7 @@ import { Per1Component } from './juegos/aventura/per-1/per-1.component';
 import { JsonService } from './json.service';
 import { FileAdminService } from './fileadmin.service';
 import { RoutesTransition } from './routestransition.service';
+import { SnapService } from './snap.service';
 
 //Routers
 import { routes } from './app.router';
@@ -48,6 +49,7 @@ import { routes } from './app.router';
     JsonService,
     FileAdminService,
     RoutesTransition,
+    SnapService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
